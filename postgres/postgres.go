@@ -10,10 +10,10 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
-type Buckets []*pgxpool.Pool
+type Shards []*pgxpool.Pool
 
-func NewPostgres(urls []string) (Buckets, error) {
-	buckets := make(Buckets, len(urls))
+func NewPostgres(urls []string) (Shards, error) {
+	shards := make(Shards, len(urls))
 
 	for i, url := range urls {
 		bucket, err := pgxpool.New(context.TODO(), url)
@@ -34,22 +34,22 @@ func NewPostgres(urls []string) (Buckets, error) {
 			return nil, fmt.Errorf("%w: %v", consts.ErrMigrate, err)
 		}
 
-		buckets[i] = bucket
+		shards[i] = bucket
 	}
 
-	return buckets, nil
+	return shards, nil
 }
 
-func (buckets Buckets) GetShard(shardKey string) (*pgxpool.Pool, int, error) {
-	bucketsCount := len(buckets)
+func (shards Shards) GetShard(shardKey string) (*pgxpool.Pool, int, error) {
+	shardsCount := len(shards)
 
-	shardIndex, err := utils.GetShardIndex(shardKey, bucketsCount)
+	shardIndex, err := utils.GetShardIndex(shardKey, shardsCount)
 	if err != nil {
 		return nil, shardIndex, err
 	}
 
-	if shardIndex <= bucketsCount {
-		return buckets[shardIndex], shardIndex, nil
+	if shardIndex <= shardsCount {
+		return shards[shardIndex], shardIndex, nil
 	}
 
 	return nil, shardIndex, consts.ErrNotFoundBucket
