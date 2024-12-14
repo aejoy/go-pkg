@@ -1,9 +1,8 @@
-module github.com/aejoy/xgo/v2
+module github.com/aejoy/go-pkg
 
 go 1.23.2
 
 require (
-	github.com/aejoy/xgo v1.0.0
 	github.com/gofiber/fiber/v3 v3.0.0-beta.3
 	github.com/golang-migrate/migrate/v4 v4.18.1
 	github.com/jackc/pgx/v5 v5.7.1

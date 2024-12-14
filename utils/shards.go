@@ -3,7 +3,7 @@ package utils
 import (
 	"math"
 
-	"github.com/aejoy/xgo/consts"
+	"github.com/aejoy/go-pkg/consts"
 	"github.com/zeebo/xxh3"
 )
 

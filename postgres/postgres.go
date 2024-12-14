@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/aejoy/xgo/consts"
-	"github.com/aejoy/xgo/utils"
+	"github.com/aejoy/go-pkg/consts"
+	"github.com/aejoy/go-pkg/utils"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
