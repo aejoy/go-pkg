@@ -10,6 +10,9 @@ linters-settings:
           - math
           - errors
           - context
+          - net/http
+          - github.com/gofiber/fiber/v3
+          - encoding/json
           - github.com/jackc/pgx/v5/pgxpool
           - database/sql
           - github.com/golang-migrate/migrate/v4
