@@ -6,6 +6,7 @@ require (
 	github.com/gofiber/fiber/v3 v3.0.0-beta.3
 	github.com/golang-migrate/migrate/v4 v4.18.1
 	github.com/jackc/pgx/v5 v5.7.1
+	github.com/matoous/go-nanoid/v2 v2.1.0
 	github.com/zeebo/xxh3 v1.0.2
 )
 

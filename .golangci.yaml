@@ -17,6 +17,7 @@ linters-settings:
           - database/sql
           - github.com/golang-migrate/migrate/v4
           - github.com/zeebo/xxh3
+          - github.com/matoous/go-nanoid/v2
           - github.com/aejoy/go-pkg
   lll:
     line-length: 200

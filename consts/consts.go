@@ -2,6 +2,11 @@ package consts
 
 import "errors"
 
+const (
+	NanoAlphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	NanoLength   = 16
+)
+
 var (
 	ErrNotFoundBucket     = errors.New("bucket is null")
 	ErrPostgresConnection = errors.New("postgres connect error")
