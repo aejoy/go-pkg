@@ -3,8 +3,8 @@ package consts
 import "errors"
 
 const (
-	NanoAlphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-	NanoLength   = 16
+	NanoAlphabet = "2346789abcdefghijkmnpqrtwxyzABCDEFGHJKLMNPQRTUVWXYZ"
+	NanoLength   = 25
 )
 
 var (
